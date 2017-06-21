@@ -20,3 +20,10 @@ end
 # `Customer.joins(:categories).where("categories.name = 'sugar'").count`
 
 # that query is taking the customers table, joining it with the fulfillments table, and then joining it with the categories table
+
+#customers = Customer.joins(:categories).where("categories.name = 'sugar'")
+#customers.pluck(:name)
+#=> ["Femi", "Gus"]
+
+#customers.flatten.select{|item| item.is_a? String }.each_with_object(Hash.new(0)) {|word, counts| counts[word] += 1}
+#{"Femi"=>1, "Gus"=>2}
